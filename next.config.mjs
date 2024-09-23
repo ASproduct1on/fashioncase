@@ -11,7 +11,7 @@ const nextConfig = {
 				headers: [
 					{
 						key: 'Access-Control-Allow-Origin',
-						value: 'https://fashioncase.vercel.app', // Разрешаем запросы с этого домена
+						value: 'https://fashioncase.vercel.app, http://localhost:3000', // Разрешаем запросы с этого домена
 					},
 					{
 						key: 'Access-Control-Allow-Methods',
@@ -20,6 +20,10 @@ const nextConfig = {
 					{
 						key: 'Access-Control-Allow-Headers',
 						value: 'X-Requested-With, Content-Type, Authorization', // Разрешённые заголовки
+					},
+					{
+						key: 'Access-Control-Allow-Credentials',
+						value: 'true', // Включить передачу учетных данных
 					},
 				],
 			},
